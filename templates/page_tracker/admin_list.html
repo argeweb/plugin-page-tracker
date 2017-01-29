@@ -1,0 +1,28 @@
+{% extends "backend/list_layout.html" %}
+{% block layout_header %}{% endblock %}
+{% block layout_before_content %}
+<div class="ibox-content m-b-sm border-bottom">
+    <div class="p-xs">
+        <div class="pull-left m-r-md">
+            <i class="fa fa-user text-navy mid-icon"></i>
+        </div>
+        <h2>追蹤設定</h2>
+        <span>使用第三方追蹤工具如Google Analytics, Google代碼管理工具, 和Facebook廣告轉換追蹤可以幫助您追蹤顧客在商店的活動行為. 善用追蹤數據進行分析，對於增加網店流量及規劃行銷策略會很有幫助！</span>
+        {% if last_record_date %}<span class="text-muted small pull-right visible-sm visible-md visible-lg">最後更新：<i class="fa fa-clock-o"></i> {{ print_value(last_record_date) }}</span>{% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block layout_content_helper %}
+    <div style="margin: 10px -10px;">
+        <div style="width: 130px; height: 182px; float: left; text-align: center;"><a href="#" class="btn" style="background-size: cover; width: 110px; height: 130px; margin-bottom: 5px; background-image: url(/plugins/page_tracker/static/ga.png);"></a><br>Google Analytics</div>
+        <div style="width: 130px; height: 182px; float: left; text-align: center;"><a href="#" class="btn" style="background-size: cover; width: 110px; height: 130px; margin-bottom: 5px; background-image: url(/plugins/page_tracker/static/gtm.png);"></a><br>Google <br>代碼管理工具</div>
+        <div style="width: 130px; height: 182px; float: left; text-align: center;"><a href="#" class="btn" style="background-size: cover; width: 110px; height: 130px; margin-bottom: 5px; background-image: url(/plugins/page_tracker/static/gad.png);"></a><br>Google Adwords</div>
+        <div style="width: 130px; height: 182px; float: left; text-align: center;"><a href="#" class="btn" style="background-size: cover; width: 110px; height: 130px; margin-bottom: 5px; background-image: url(/plugins/page_tracker/static/grm.png);"></a><br>Google 再行銷</div>
+        <div style="width: 130px; height: 182px; float: left; text-align: center;"><a href="#" class="btn" style="background-size: cover; width: 110px; height: 130px; margin-bottom: 5px; background-image: url(/plugins/page_tracker/static/fb.png);"></a><br>Facebook <br>像素</div>
+        <div style="width: 130px; height: 182px; float: left; text-align: center;"><a href="#" class="btn" style="background-size: cover; width: 110px; height: 130px; margin-bottom: 5px; background-image: url(/plugins/page_tracker/static/bing.png);"></a><br>Bing <br>關鍵字廣告追蹤碼</div>
+        <div style="width: 130px; height: 182px; float: left; text-align: center;"><a href="#" class="btn" style="background-size: cover; width: 110px; height: 130px; margin-bottom: 5px; background-image: url(/plugins/page_tracker/static/yahoo.png);"></a><br>Yahoo <br>原生廣告追蹤碼</div>
+        <div style="clear: both;"></div>
+    </div>
+{% endblock %}
+{% block layout_buttons %}{% endblock %}
