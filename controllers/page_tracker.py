@@ -14,7 +14,6 @@ from argeweb.components.search import Search
 class PageTracker(Controller):
     class Meta:
         components = (scaffold.Scaffolding, Pagination, Search)
-        pagination_limit = 10
 
     class Scaffold:
         display_in_list = ('title', 'image', 'is_enable', 'category')

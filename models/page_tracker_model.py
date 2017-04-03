@@ -15,7 +15,7 @@ def get_page_tracker_code(**kwargs):
 
 
 class PageTrackerModel(BasicModel):
-    name = Fields.StringProperty(verbose_name=u'頁面名稱(網址)')
+    name = Fields.StringProperty(verbose_name=u'識別名稱')
     title = Fields.StringProperty(verbose_name=u'標題')
     content = Fields.RichTextProperty(verbose_name=u'內容')
     image = Fields.ImageProperty(verbose_name=u'圖片')
