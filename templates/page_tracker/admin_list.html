@@ -1,7 +1,7 @@
 {% extends "backend/list_layout.html" %}
-{% block layout_header %}{% endblock %}
-{% block layout_before_content %}
-<div class="ibox-content m-b-sm border-bottom">
+{% block page_header %}{% endblock %}
+{% block page_big_header %}
+<div class="ibox-content m-b-sm border-bottom page-big-header">
     <div class="p-xs">
         <div class="pull-left m-r-md">
             <i class="fa fa-user text-navy mid-icon"></i>
@@ -13,7 +13,7 @@
 </div>
 {% endblock %}
 
-{% block layout_content_helper %}
+{% block list_before_content %}
     <div style="margin: 10px -10px;">
         <div style="width: 130px; height: 182px; float: left; text-align: center;"><a href="#" class="btn" style="background-size: cover; width: 110px; height: 130px; margin-bottom: 5px; background-image: url(/plugins/page_tracker/static/ga.png);"></a><br>Google Analytics</div>
         <div style="width: 130px; height: 182px; float: left; text-align: center;"><a href="#" class="btn" style="background-size: cover; width: 110px; height: 130px; margin-bottom: 5px; background-image: url(/plugins/page_tracker/static/gtm.png);"></a><br>Google <br>代碼管理工具</div>
@@ -25,4 +25,3 @@
         <div style="clear: both;"></div>
     </div>
 {% endblock %}
-{% block layout_buttons %}{% endblock %}

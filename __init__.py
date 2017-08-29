@@ -10,7 +10,7 @@ from argeweb import ViewDatastore, ViewFunction
 from models.page_tracker_model import PageTrackerModel, get_page_tracker_code
 
 ViewFunction.register(get_page_tracker_code)
-ViewDatastore.register('page_tracker', PageTrackerModel.find_by_name)
+ViewDatastore.register('page_tracker', PageTrackerModel.get_by_name)
 
 plugins_helper = {
     'title': u'頁面追縱',

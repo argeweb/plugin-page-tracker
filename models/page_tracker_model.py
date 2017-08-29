@@ -19,7 +19,7 @@ class PageTrackerModel(BasicModel):
     title = Fields.StringProperty(verbose_name=u'標題')
     content = Fields.RichTextProperty(verbose_name=u'內容')
     image = Fields.ImageProperty(verbose_name=u'圖片')
-    is_enable = Fields.BooleanProperty(default=True, verbose_name=u'顯示於前台')
+    is_enable = Fields.BooleanProperty(verbose_name=u'顯示於前台', default=True)
 
     @classmethod
     def all_enable(cls, category=None, *args, **kwargs):
@@ -27,7 +27,7 @@ class PageTrackerModel(BasicModel):
 
     @classmethod
     def insert(cls, name, title, content=u'', is_enable=True, image=u''):
-        item = cls.find_by_name(name)
+        item = cls.get_by_name(name)
         if item is not None:
             return
         if content == u'':
